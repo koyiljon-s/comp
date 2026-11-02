@@ -9,9 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.50.0",
+    "@tanstack/react-query": "^5.105.1",
+    "@wagmi/connectors": "^8.2.2",
     "next": "16.4.3",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "viem": "^2.57.14",
+    "wagmi": "^3.7.9"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
