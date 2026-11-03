@@ -32,14 +32,14 @@ export default function AddressSearch({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-2 bg-[#2a2b2b] border border-dashed border-[#738fff] p-6 rounded-sm">
+    <form onSubmit={handleSubmit} className="space-y-4 bg-[#1e1e1f] border border-dashed border-[#738fff] p-6 rounded-sm">
       <label
         htmlFor="account-address"
         className="block text-xl font-medium text-white"
       >
         Base account
       </label>
-      <div className="flex flex-col gap-2 sm:flex-row">
+      <div className="flex flex-col gap-4 sm:flex-row">
         <input
           id="account-address"
           name="address"
@@ -48,7 +48,7 @@ export default function AddressSearch({
           placeholder="Search by address ..."
           autoComplete="off"
           spellCheck={false}
-          className="w-full rounded-lg border border-[#3e3e40] bg-[#1e1e1f] px-3 py-2 font-mono text-sm text-[#b1b5ba] placeholder:text-zinc-400 focus:border-zinc-500 focus:outline-none focus:ring-1 focus:ring-zinc-500"
+          className="w-full rounded-lg border border-[#3e3e40] bg-[#343436] px-3 py-2 font-mono text-sm text-[#b1b5ba] placeholder:text-zinc-400 focus:border-zinc-500 focus:outline-none focus:ring-1 focus:ring-zinc-500"
         />
         <button
           type="submit"
