@@ -49,9 +49,9 @@ export default function SupplyPanel({
           title="Collateral markets"
           description="Accepted collateral, risk parameters, and your supplied balances."
         />
-        <div className="overflow-x-auto rounded-lg border border-zinc-200">
-          <table className="w-full min-w-[760px] text-left text-sm">
-            <thead className="bg-zinc-50 text-xs uppercase tracking-wide text-zinc-500">
+        <div className="overflow-x-auto rounded-lg border border-[#262626]">
+          <table className="w-full min-w-190 text-left text-sm">
+            <thead className="bg-[#262626] text-sm tracking-wide text-[#a3a3a3]">
               <tr>
                 <th className="px-4 py-3 font-medium">Asset</th>
                 <th className="px-4 py-3 text-right font-medium">Price</th>
@@ -62,28 +62,28 @@ export default function SupplyPanel({
                 <th className="px-4 py-3 text-right font-medium">Your value</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-zinc-100">
+            <tbody className="divide-y divide-[#262626]">
               {account.collateral.map((asset) => (
                 <tr key={asset.address}>
-                  <td className="px-4 py-3 font-medium text-zinc-900">
+                  <td className="px-4 py-3 font-medium text-[#a3a3a3]">
                     {asset.symbol}
                   </td>
-                  <td className="px-4 py-3 text-right tabular-nums text-zinc-600">
+                  <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                     {formatUsd(asset.priceUsd)}
                   </td>
-                  <td className="px-4 py-3 text-right tabular-nums text-zinc-600">
+                  <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                     {formatPercent(asset.borrowCollateralFactor, 0)}
                   </td>
-                  <td className="px-4 py-3 text-right tabular-nums text-zinc-600">
+                  <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                     {formatPercent(asset.liquidateCollateralFactor, 0)}
                   </td>
-                  <td className="px-4 py-3 text-right tabular-nums text-zinc-600">
+                  <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                     {asset.supplyCap}
                   </td>
-                  <td className="px-4 py-3 text-right tabular-nums text-zinc-900">
+                  <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                     {formatToken(asset.balance)} {asset.symbol}
                   </td>
-                  <td className="px-4 py-3 text-right tabular-nums text-zinc-900">
+                  <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                     {formatUsd(asset.balanceUsd)}
                   </td>
                 </tr>

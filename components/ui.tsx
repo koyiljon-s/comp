@@ -3,9 +3,9 @@ import type { ReactNode } from "react";
 type Tone = "default" | "positive" | "warning" | "danger";
 
 const toneClass: Record<Tone, string> = {
-  default: "text-zinc-900",
+  default: "text-[#1c8eff]",
   positive: "text-emerald-600",
-  warning: "text-amber-600",
+  warning: "text-[#ff24cc]",
   danger: "text-red-600",
 };
 
@@ -21,16 +21,16 @@ export function StatCard({
   tone?: Tone;
 }) {
   return (
-    <div className="rounded-lg border border-zinc-200 bg-zinc-50/60 p-4">
-      <p className="text-xs font-medium uppercase tracking-wide text-zinc-500">
+    <div className="rounded-lg border border-[#262626] bg-[#141414] p-4">
+      <p className="text-lg font-medium tracking-wide text-white">
         {label}
       </p>
       <p
-        className={`mt-2 text-2xl font-bold tabular-nums ${toneClass[tone]}`}
+        className={`mt-4 text-2xl font-bold tabular-nums ${toneClass[tone]}`}
       >
         {value}
       </p>
-      {hint ? <p className="mt-1 text-xs text-zinc-500">{hint}</p> : null}
+      {hint ? <p className="mt-4 text-xs text-zinc-300">{hint}</p> : null}
     </div>
   );
 }
