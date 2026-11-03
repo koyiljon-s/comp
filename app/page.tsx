@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { getAddress, isAddress, type Address } from "viem";
 import AddressSearch from "@/components/address-search";
-import Navbar from "@/components/navbar";
 import BorrowPanel from "@/components/panels/borrow";
 import DashboardPanel from "@/components/panels/dashboard";
 import HistoryPanel from "@/components/panels/history";
@@ -81,8 +80,8 @@ export default function Home() {
       <div className="mx-auto flex w-full max-w-full flex-1 flex-col gap-6 md:flex-row">
         <Sidebar active={activeSection} onSelect={setActiveSection} />
 
-        <main className="min-w-0 flex-1 rounded-xl border border-zinc-200 bg-white p-6 sm:p-8">
-          <header className="flex flex-col gap-4 border-b border-zinc-100 pb-6 sm:flex-row sm:items-start sm:justify-between">
+        <main className="min-w-0 flex-1 bg-white p-6 sm:p-8">
+          <header className="flex flex-col gap-4  pb-6 sm:flex-row sm:items-start sm:justify-between">
             <div>
               <div className="flex items-center gap-2">
                 <h1 className="text-2xl font-bold tracking-tight text-zinc-900">
