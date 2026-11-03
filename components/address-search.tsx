@@ -32,10 +32,10 @@ export default function AddressSearch({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-2">
+    <form onSubmit={handleSubmit} className="space-y-2 bg-[#2a2b2b] border border-dashed border-[#738fff] p-6 rounded-sm">
       <label
         htmlFor="account-address"
-        className="block text-sm font-medium text-zinc-700"
+        className="block text-xl font-medium text-white"
       >
         Base account
       </label>
@@ -45,28 +45,19 @@ export default function AddressSearch({
           name="address"
           value={input}
           onChange={(event) => setInput(event.target.value)}
-          placeholder="0x…"
+          placeholder="Search by address ..."
           autoComplete="off"
           spellCheck={false}
-          className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 font-mono text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-zinc-500 focus:outline-none focus:ring-1 focus:ring-zinc-500"
+          className="w-full rounded-lg border border-[#3e3e40] bg-[#1e1e1f] px-3 py-2 font-mono text-sm text-[#b1b5ba] placeholder:text-zinc-400 focus:border-zinc-500 focus:outline-none focus:ring-1 focus:ring-zinc-500"
         />
         <button
           type="submit"
           disabled={loading}
-          className="shrink-0 rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-700 disabled:cursor-not-allowed disabled:opacity-60"
+          className="shrink-0 rounded-lg bg-[#3640f7] px-6 py-2 text-lg font-medium text-white transition-colors hover:bg-zinc-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {loading ? "Loading…" : "Load position"}
+          {loading ? "Loading…" : "Search"}
         </button>
       </div>
-      {error ? (
-        <p role="alert" className="text-xs text-red-600">
-          {error}
-        </p>
-      ) : (
-        <p className="text-xs text-zinc-500">
-          Paste any address that has used Compound III on Base.
-        </p>
-      )}
     </form>
   );
 }

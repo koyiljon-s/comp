@@ -32,7 +32,7 @@ type SidebarProps = {
 
 export default function Sidebar({ active, onSelect }: SidebarProps) {
   return (
-    <aside className="w-full shrink-0 border-b border-zinc-200 bg-[#121212] shadow-sm md:sticky md:top-0 md:h-screen md:self-start md:w-72 md:border-b-0 md:border-r">
+    <aside className="w-full shrink-0 border-r border-[#333333] bg-[#121212] shadow-sm md:sticky md:top-0 md:h-screen md:self-start md:w-72 md:border-b-0 md:border-r">
       <div className="p-4">
        <span className="text-2xl text-white font-medium tracking-tight">SafeBorrow</span>
       </div>
@@ -50,7 +50,7 @@ export default function Sidebar({ active, onSelect }: SidebarProps) {
               type="button"
               onClick={() => onSelect(section)}
               aria-current={isActive ? "page" : undefined}
-              className={`flex shrink-0 items-center rounded-lg gap-2 px-3 py-2 text-lg transition-colors md:w-full ${
+              className={`flex shrink-0 items-center rounded-lg gap-2 px-4 py-2 text-lg transition-colors md:w-full ${
                 isActive
                   ? "bg-[#292929] font-medium text-blue-600 shadow-sm"
                   : "text-[#e6e6e6] hover:bg-[#292929] hover:text-blue-600"
