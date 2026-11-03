@@ -101,7 +101,7 @@ export function EmptyState({
 
 export function ReadOnlyNote() {
   return (
-    <p className="rounded-lg text-center bg-[#1a1f66] border border-[#738fff] px-4 py-3 text-sm text-#738fff">
+    <p className="rounded-lg text-center text-[#738fff] bg-[#1a1f66] border border-[#738fff] px-4 py-3 text-sm text-#738fff">
       Read-only demo — data is read directly from Compound III on Base. 
     </p>
   );
