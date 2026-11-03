@@ -32,8 +32,8 @@ type SidebarProps = {
 
 export default function Sidebar({ active, onSelect }: SidebarProps) {
   return (
-    <aside className="w-full shrink-0 border-r border-[#333333] bg-[#121212] shadow-sm md:sticky md:top-0 md:h-screen md:self-start md:w-72 md:border-b-0 md:border-r">
-      <div className="p-4">
+    <aside className="w-full shrink-0 border-r border-[#333333] bg-[#0a0a0a] shadow-sm md:sticky md:top-0 md:h-screen md:self-start md:w-72 md:border-b-0 md:border-r">
+      <div className="p-6">
        <span className="text-2xl text-white font-medium tracking-tight">SafeBorrow</span>
       </div>
       <nav

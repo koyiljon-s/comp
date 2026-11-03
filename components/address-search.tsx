@@ -32,7 +32,7 @@ export default function AddressSearch({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 bg-[#1e1e1f] border border-dashed border-[#738fff] p-6 rounded-sm">
+    <form onSubmit={handleSubmit} className="space-y-4 border border-dashed border-[#738fff] p-6 rounded-sm">
       <label
         htmlFor="account-address"
         className="block text-xl font-medium text-white"

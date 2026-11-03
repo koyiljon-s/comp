@@ -27,10 +27,9 @@ export default function DashboardPanel({
 
   return (
     <div className="space-y-8">
-      <section className="space-y-3">
+      <section className="space-y-3 text-white">
         <SectionHeading
-          title="Your position"
-          description={`Live from ${market.name} on Base.`}
+          title="Your Position"
         />
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           <StatCard

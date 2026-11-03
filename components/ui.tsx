@@ -37,7 +37,6 @@ export function StatCard({
 
 export function SectionHeading({
   title,
-  description,
   action,
 }: {
   title: string;
@@ -47,12 +46,9 @@ export function SectionHeading({
   return (
     <div className="flex items-start justify-between gap-4">
       <div>
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+        <h2 className="text-xl font-semibold tracking-wide text-white">
           {title}
         </h2>
-        {description ? (
-          <p className="mt-1 text-sm text-zinc-600">{description}</p>
-        ) : null}
       </div>
       {action}
     </div>

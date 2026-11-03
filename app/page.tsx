@@ -68,11 +68,11 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-1 flex-col bg-[#1e1e1f] font-sans">
+    <div className="flex flex-1 flex-col bg-[#121212] font-sans">
       <div className="mx-auto flex w-full max-w-full flex-1 flex-col gap-6 md:flex-row">
         <Sidebar active={activeSection} onSelect={setActiveSection} />
 
-        <main className="min-w-0 flex-1 bg-[#1e1e1f] p-6 sm:p-8">
+        <main className="min-w-0 flex-1 bg-[#121212] p-6 sm:p-8">
           <header className="flex flex-col gap-4  pb-6 sm:flex-row sm:items-start sm:justify-between">
             <div>
               <div className="flex items-center gap-2">
