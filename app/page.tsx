@@ -78,7 +78,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-1 flex-col bg-zinc-50 font-sans">
-      <Navbar />
       <div className="mx-auto flex w-full max-w-full flex-1 flex-col gap-6 md:flex-row">
         <Sidebar active={activeSection} onSelect={setActiveSection} />
 
