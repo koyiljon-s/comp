@@ -10,7 +10,6 @@ import RiskSimPanel from "@/components/panels/risk-sim";
 import SupplyPanel from "@/components/panels/supply";
 import Sidebar, { type Section } from "@/components/sidebar";
 import { Badge, EmptyState } from "@/components/ui";
-import { formatRelativeTime, shortAddress } from "@/lib/compound/format";
 import { useCompound } from "@/lib/compound/use-compound";
 
 
