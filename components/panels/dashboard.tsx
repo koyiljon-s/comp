@@ -70,9 +70,9 @@ export default function DashboardPanel({
             No collateral supplied on this market.
           </p>
         ) : (
-          <div className="overflow-x-auto rounded-lg border border-zinc-100">
+          <div className="overflow-x-auto rounded-lg border border-[#262626]">
             <table className="w-full min-w-160 text-left text-sm">
-              <thead className="bg-zinc-50 text-xs uppercase tracking-wide text-zinc-500">
+              <thead className="bg-[#262626] text-sm tracking-wide text-[#a3a3a3]">
                 <tr>
                   <th className="px-4 py-3 font-medium">Asset</th>
                   <th className="px-4 py-3 text-right font-medium">Balance</th>
@@ -83,22 +83,22 @@ export default function DashboardPanel({
                   </th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-zinc-100">
+              <tbody className="divide-y divide-[#262626]">
                 {suppliedCollateral.map((asset) => (
                   <tr key={asset.address}>
-                    <td className="px-4 py-3 font-medium text-zinc-900">
+                    <td className="px-4 py-3 font-medium text-[#a3a3a3]">
                       {asset.symbol}
                     </td>
-                    <td className="px-4 py-3 text-right tabular-nums text-zinc-600">
+                    <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                       {formatToken(asset.balance)}
                     </td>
-                    <td className="px-4 py-3 text-right tabular-nums text-zinc-600">
+                    <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                       {formatUsd(asset.priceUsd)}
                     </td>
-                    <td className="px-4 py-3 text-right tabular-nums text-zinc-900">
+                    <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                       {formatUsd(asset.balanceUsd)}
                     </td>
-                    <td className="px-4 py-3 text-right tabular-nums text-zinc-600">
+                    <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                       {formatPercent(asset.liquidateCollateralFactor, 0)}
                     </td>
                   </tr>

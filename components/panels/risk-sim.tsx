@@ -79,11 +79,10 @@ export default function RiskSimPanel({
       <section className="space-y-4">
         <SectionHeading
           title="Collateral price shock"
-          description="Drag to stress the collateral value."
         />
-        <div className="rounded-lg border border-zinc-200 p-4">
-          <div className="flex items-center justify-between text-sm">
-            <span className="font-medium text-zinc-700">Price drop</span>
+        <div className="rounded-lg border border-[#262626] p-4">
+          <div className="flex items-center justify-between text-xl">
+            <span className="font-medium text-white">Price drop</span>
             <span className="tabular-nums text-zinc-900">−{shock}%</span>
           </div>
           <input
@@ -94,18 +93,18 @@ export default function RiskSimPanel({
             value={shock}
             onChange={(event) => setShock(Number(event.target.value))}
             aria-label="Collateral price drop percentage"
-            className="mt-3 w-full accent-zinc-900"
+            className="mt-3 w-full accent-[#be96fa]"
           />
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-4 py-4">
             {SCENARIOS.map((scenario) => (
               <button
                 key={scenario}
                 type="button"
                 onClick={() => setShock(scenario)}
-                className={`rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+                className={`rounded-lg px-6 py-2 text-lg font-medium transition-colors ${
                   shock === scenario
-                    ? "border-zinc-900 bg-zinc-900 text-white"
-                    : "border-zinc-200 text-zinc-600 hover:border-zinc-400 hover:text-zinc-900"
+                    ? " bg-[#271c36] text-[#be96fa]"
+                    : " bg-[#141414] border border-[#292929] text-zinc-600"
                 }`}
               >
                 −{scenario}%
@@ -114,9 +113,9 @@ export default function RiskSimPanel({
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-lg border border-zinc-200">
+        <div className="overflow-hidden mt-8 rounded-lg border border-[#262626]">
           <table className="w-full text-left text-sm">
-            <thead className="bg-zinc-50 text-xs uppercase tracking-wide text-zinc-500">
+            <thead className="bg-[#262626] text-xs uppercase tracking-wide text-[#a3a3a3]">
               <tr>
                 <th className="px-4 py-3 font-medium">Scenario</th>
                 <th className="px-4 py-3 text-right font-medium">
@@ -128,13 +127,13 @@ export default function RiskSimPanel({
                 <th className="px-4 py-3 text-right font-medium">Status</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-zinc-100">
+            <tbody className="divide-y divide-[#262626]">
               <tr>
-                <td className="px-4 py-3 font-medium text-zinc-900">Now</td>
-                <td className="px-4 py-3 text-right tabular-nums text-zinc-600">
+                <td className="px-4 py-3 font-medium text-[#a3a3a3]">Now</td>
+                <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                   {formatUsd(account.collateralUsd)}
                 </td>
-                <td className="px-4 py-3 text-right tabular-nums text-zinc-900">
+                <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                   {formatHealthFactor(currentHealth)}
                 </td>
                 <td className="px-4 py-3 text-right text-emerald-600">Safe</td>
@@ -147,15 +146,15 @@ export default function RiskSimPanel({
 
                 return (
                   <tr key={scenario}>
-                    <td className="px-4 py-3 font-medium text-zinc-900">
+                    <td className="px-4 py-3 font-medium text-[#a3a3a3]">
                       −{scenario}%
                     </td>
-                    <td className="px-4 py-3 text-right tabular-nums text-zinc-600">
+                    <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                       {formatUsd(
                         account.collateralUsd * (1 - scenario / 100),
                       )}
                     </td>
-                    <td className="px-4 py-3 text-right tabular-nums text-zinc-900">
+                    <td className="px-4 py-3 text-right tabular-nums text-[#a3a3a3]">
                       {formatHealthFactor(scenarioHealth)}
                     </td>
                     <td
@@ -180,7 +179,7 @@ export default function RiskSimPanel({
           </table>
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid gap-3 sm:grid-cols-2 mt-8">
           <StatCard
             label="Collateral value"
             value={formatUsd(account.collateralUsd)}

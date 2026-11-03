@@ -89,9 +89,9 @@ export function EmptyState({
   children?: ReactNode;
 }) {
   return (
-    <div className="rounded-xl border border-dashed border-zinc-300 bg-zinc-50/60 px-6 py-12 text-center">
-      <h3 className="text-base font-semibold text-zinc-900">{title}</h3>
-      <p className="mx-auto mt-2 max-w-md text-sm text-zinc-600">
+    <div className="rounded-xl border border-[#3e3e40] bg-[#2a2b2b] px-6 py-12 text-center">
+      <h1 className="text-xl font-semibold text-white">{title}</h1>
+      <p className="mx-auto mt-2 max-w-md text-sm text-zinc-500">
         {description}
       </p>
       {children ? <div className="mt-6">{children}</div> : null}
